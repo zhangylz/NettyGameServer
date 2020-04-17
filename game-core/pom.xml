@@ -60,8 +60,9 @@
       <artifactId>curator-recipes</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.github.jwpttcg66</groupId>
+      <groupId>com.github.zhangylz</groupId>
       <artifactId>wheel-timer</artifactId>
+      <version>1.0</version>
     </dependency>
     <dependency>
       <groupId>commons-lang</groupId>

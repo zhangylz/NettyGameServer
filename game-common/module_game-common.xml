@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_game-common" default="compile.module.game-common">
+  <dirname property="module.game-common.basedir" file="${ant.file.module_game-common}"/>
+  
+  <property name="module.jdk.home.game-common" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.game-common" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.game-common" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.game-common" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="game-common.output.dir" value="${module.game-common.basedir}/target/classes"/>
+  <property name="game-common.testoutput.dir" value="${module.game-common.basedir}/target/test-classes"/>
+  
+  <path id="game-common.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="game-common.module.production.classpath">
+    <path refid="${module.jdk.classpath.game-common}"/>
+    <path refid="library.maven:_org.springframework:spring-core:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.12.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:1.4.classpath"/>
+    <path refid="library.maven:_com.alibaba:fastjson:1.2.51.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jdom:jdom:2.0.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+  </path>
+  
+  <path id="game-common.runtime.production.module.classpath">
+    <pathelement location="${game-common.output.dir}"/>
+    <path refid="library.maven:_org.springframework:spring-core:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.12.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:1.4.classpath"/>
+    <path refid="library.maven:_com.alibaba:fastjson:1.2.51.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jdom:jdom:2.0.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+  </path>
+  
+  <path id="game-common.module.classpath">
+    <path refid="${module.jdk.classpath.game-common}"/>
+    <pathelement location="${game-common.output.dir}"/>
+    <path refid="library.maven:_org.springframework:spring-core:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-test:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.12.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:1.4.classpath"/>
+    <path refid="library.maven:_com.alibaba:fastjson:1.2.51.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jdom:jdom:2.0.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  <path id="game-common.runtime.module.classpath">
+    <pathelement location="${game-common.testoutput.dir}"/>
+    <pathelement location="${game-common.output.dir}"/>
+    <path refid="library.maven:_org.springframework:spring-core:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context-support:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-test:5.1.2.release.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.10.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.10.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.12.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_commons-io:commons-io:1.4.classpath"/>
+    <path refid="library.maven:_com.alibaba:fastjson:1.2.51.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.6.classpath"/>
+    <path refid="library.maven:_org.jdom:jdom:2.0.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.21.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-classic:1.1.7.classpath"/>
+    <path refid="library.maven:_ch.qos.logback:logback-core:1.1.7.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.game-common">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.game-common">
+    <patternset refid="excluded.from.module.game-common"/>
+  </patternset>
+  
+  <path id="game-common.module.sourcepath">
+    <dirset dir="${module.game-common.basedir}">
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.game-common" depends="compile.module.game-common.production,compile.module.game-common.tests" description="Compile module game-common"/>
+  
+  <target name="compile.module.game-common.production" depends="register.custom.compilers" description="Compile module game-common; production classes">
+    <mkdir dir="${game-common.output.dir}"/>
+    <javac2 destdir="${game-common.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.game-common}/javac">
+      <compilerarg line="${compiler.args.game-common}"/>
+      <bootclasspath refid="game-common.module.bootclasspath"/>
+      <classpath refid="game-common.module.production.classpath"/>
+      <src refid="game-common.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.game-common"/>
+    </javac2>
+    
+    <copy todir="${game-common.output.dir}">
+      <fileset dir="${module.game-common.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.game-common.tests" depends="register.custom.compilers,compile.module.game-common.production" description="compile module game-common; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.game-common" description="cleanup module">
+    <delete dir="${game-common.output.dir}"/>
+    <delete dir="${game-common.testoutput.dir}"/>
+  </target>
+</project>

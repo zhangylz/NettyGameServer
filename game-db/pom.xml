@@ -20,8 +20,9 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.github.jwpttcg66</groupId>
+      <groupId>com.github.zhangylz</groupId>
       <artifactId>GameThreadPool</artifactId>
+      <version>1.1.5</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
@@ -76,8 +77,9 @@
       <artifactId>pagehelper</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.github.jwpttcg66</groupId>
+      <groupId>com.github.zhangylz</groupId>
       <artifactId>redis-game-transaction</artifactId>
+      <version>1.8.010</version>
     </dependency>
     <dependency>
       <groupId>com.alibaba</groupId>

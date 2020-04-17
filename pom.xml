@@ -60,6 +60,10 @@
       <id>jitpack.io</id>
       <url>https://jitpack.io</url>
     </repository>
+    <repository>
+      <id>alimaven</id>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+    </repository>
   </repositories>
 
   <modules>
@@ -150,24 +154,29 @@
         <version>${zookeeper.version}</version>
       </dependency>
       <dependency>
-        <groupId>com.github.jwpttcg66</groupId>
-        <artifactId>GameThreadPool</artifactId>
-        <version>${GameThreadPool.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.github.jwpttcg66</groupId>
+        <groupId>com.github.zhangylz</groupId>
         <artifactId>game-expression</artifactId>
-        <version>${game-expression.version}</version>
+        <version>1.1</version>
       </dependency>
       <dependency>
-        <groupId>com.github.jwpttcg66</groupId>
+        <groupId>com.github.zhangylz</groupId>
+        <artifactId>GameThreadPool</artifactId>
+        <version>1.1.5</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.zhangylz</groupId>
         <artifactId>future-listener</artifactId>
-        <version>${future-listener.version}</version>
+        <version>1.1</version>
       </dependency>
       <dependency>
-        <groupId>com.github.jwpttcg66</groupId>
+        <groupId>com.github.zhangylz</groupId>
         <artifactId>wheel-timer</artifactId>
-        <version>${wheel-timer.version}</version>
+        <version>1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.zhangylz</groupId>
+        <artifactId>redis-game-transaction</artifactId>
+        <version>1.8.010</version>
       </dependency>
       <dependency>
         <groupId>com.101tec</groupId>
@@ -224,11 +233,6 @@
         <groupId>com.github.pagehelper</groupId>
         <artifactId>pagehelper</artifactId>
         <version>${pagehelper.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.github.jwpttcg66</groupId>
-        <artifactId>redis-game-transaction</artifactId>
-        <version>${redis-game-transaction.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
@@ -336,7 +340,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>2.4</version>
+        <version>3.2.0</version>
         <executions>
           <execution>
             <id>attach-sources</id>

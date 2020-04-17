@@ -20,12 +20,14 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.github.jwpttcg66</groupId>
+      <groupId>com.github.zhangylz</groupId>
       <artifactId>GameThreadPool</artifactId>
+      <version>1.1.5</version>
     </dependency>
     <dependency>
-      <groupId>com.github.jwpttcg66</groupId>
+      <groupId>com.github.zhangylz</groupId>
       <artifactId>future-listener</artifactId>
+      <version>1.1</version>
     </dependency>
     <dependency>
       <groupId>com.lmax</groupId>
